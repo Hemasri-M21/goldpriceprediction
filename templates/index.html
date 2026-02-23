@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gold Price Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#f7f7f7,#e6f0ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Gold Price Predictor</h2>
+
+<form method="POST">
+    <input name="spx" placeholder="SPX value" required>
+    <input name="oil" placeholder="Oil Price" required>
+    <input name="slv" placeholder="Silver Price" required>
+    <input name="eurusd" placeholder="EUR/USD" required>
+
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+<div class="result">
+    Predicted Gold Price: {{ prediction }}
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
