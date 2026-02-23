@@ -62,7 +62,7 @@ cd Gold-Price-Prediction
 
 ### 2️. Install required libraries
 
-pip install flask numpy pandas scikit-learn
+pip install -r requirements.txt
 
 ### 3️. Run the Flask app
 
