@@ -66,11 +66,10 @@
 <h2>Gold Price Predictor</h2>
 
 <form method="POST">
-    <input name="spx" placeholder="SPX value" required>
-    <input name="oil" placeholder="Oil Price" required>
-    <input name="slv" placeholder="Silver Price" required>
-    <input name="eurusd" placeholder="EUR/USD" required>
-
+    <input name="spx" placeholder="SPX value" value="{{ spx }}">
+    <input name="oil" placeholder="Oil Price" value="{{ oil }}">
+    <input name="slv" placeholder="Silver Price" value="{{ slv }}">
+    <input name="eurusd" placeholder="EUR/USD" value="{{ eurusd }}">
     <button type="submit">Predict</button>
 </form>
 
